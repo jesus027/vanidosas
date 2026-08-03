@@ -8,8 +8,45 @@ import { studio, team, heroImages } from "./data";
 // Diseño 4 — Combinado: base del Diseño 1 (editorial claro) con el hero
 // full-bleed oscuro y el formulario oscuro del Diseño 2.
 export default function Design4() {
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@type": "NailSalon",
+    name: studio.name,
+    image: "https://vanidosas.vercel.app/images/logo.png",
+    url: "https://vanidosas.vercel.app",
+    telephone: "+541179007381",
+    email: studio.email,
+    priceRange: "$$",
+    slogan: studio.slogan,
+    address: {
+      "@type": "PostalAddress",
+      streetAddress: "Mario Bravo 290",
+      addressLocality: "Almagro",
+      addressRegion: "Ciudad Autónoma de Buenos Aires",
+      postalCode: "C1175",
+      addressCountry: "AR",
+    },
+    geo: {
+      "@type": "GeoCoordinates",
+      latitude: -34.6019,
+      longitude: -58.4173,
+    },
+    openingHoursSpecification: [
+      {
+        "@type": "OpeningHoursSpecification",
+        dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
+        opens: "10:00",
+        closes: "20:00",
+      },
+    ],
+  };
+
   return (
     <main id="top" className="bg-blanco-2 text-foreground">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
       {/* Nav transparente sobre el hero, sólido al hacer scroll */}
       <Header4 />
 
