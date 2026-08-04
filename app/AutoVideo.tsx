@@ -44,11 +44,15 @@ export default function AutoVideo({ src, poster, className, ...rest }: Props) {
     };
   }, [src]);
 
+  // Si no se pasa poster, se usa el frame .jpg del propio video (mismo nombre).
+  // Así, si el navegador no autoplayea (iOS ahorro de energía), se ve como imagen.
+  const finalPoster = poster ?? src.replace(/\.mp4$/, ".jpg");
+
   return (
     <video
       ref={ref}
       src={src}
-      poster={poster}
+      poster={finalPoster}
       className={className}
       autoPlay
       muted

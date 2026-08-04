@@ -125,6 +125,20 @@ body {
   font-family: var(--font-serif), Georgia, serif;
 }
 
+/* Videos decorativos de fondo: ocultar el botón de play nativo de iOS/Safari
+   para que, si el navegador no autoplayea, se vea como una imagen (el poster). */
+video::-webkit-media-controls-start-playback-button,
+video::-webkit-media-controls-overlay-play-button,
+video::-webkit-media-controls-play-button,
+video::-webkit-media-controls-panel,
+video::-webkit-media-controls {
+  display: none !important;
+  -webkit-appearance: none;
+  appearance: none;
+  opacity: 0;
+  pointer-events: none;
+}
+
 .dark {
   --background: oklch(0.145 0 0);
   --foreground: oklch(0.985 0 0);
