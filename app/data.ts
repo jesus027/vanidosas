@@ -50,7 +50,7 @@ export const serviceGroups: ServiceGroup[] = [
   {
     title: "Manicure",
     items: [
-      { name: "Manicure Rosa", price: "$15.000" },
+      { name: "Manicure Rusa", price: "$15.000" },
       { name: "Semipermanente", price: "$25.000" },
       { name: "Nivelación", price: "$28.000" },
       { name: "Kapping Polygel", price: "$32.000" },
