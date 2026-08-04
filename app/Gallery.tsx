@@ -9,6 +9,7 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from "@/components/ui/carousel";
+import AutoVideo from "./AutoVideo";
 import { galleryImages } from "./data";
 
 /* ---------- Pilares con slogan ---------- */
@@ -138,13 +139,9 @@ export function VideoBand({
 }) {
   return (
     <section className="relative flex h-[70vh] items-center justify-center overflow-hidden">
-      <video
+      <AutoVideo
         className="absolute inset-0 h-full w-full object-cover"
         src={src}
-        autoPlay
-        muted
-        loop
-        playsInline
       />
       <div className="absolute inset-0 bg-marron-1/45" />
       <motion.div

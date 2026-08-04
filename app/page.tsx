@@ -1,4 +1,5 @@
 import BookingForm from "./BookingForm";
+import AutoVideo from "./AutoVideo";
 import Header4 from "./Header4";
 import { SloganPillars, WorksCarousel, VideoBand } from "./Gallery";
 import ServicesShowcase from "./ServicesShowcase";
@@ -52,14 +53,10 @@ export default function Design4() {
 
       {/* Hero full-bleed oscuro (Diseño 2) — arranca detrás del header */}
       <section className="relative flex min-h-screen items-center overflow-hidden">
-        <video
+        <AutoVideo
           className="absolute inset-0 h-full w-full object-cover"
           src="/video/video-1.mp4"
           poster={heroImages.boutique}
-          autoPlay
-          muted
-          loop
-          playsInline
           aria-label="Uñas Vanidosas"
         />
         <div className="absolute inset-0 bg-linear-to-r from-marron-1/80 via-marron-1/45 to-transparent" aria-hidden />

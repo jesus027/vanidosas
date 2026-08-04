@@ -3,6 +3,7 @@
 import { useState } from "react";
 import { AnimatePresence, motion } from "motion/react";
 import { Hand, Footprints, Eye, Plus } from "lucide-react";
+import AutoVideo from "./AutoVideo";
 import { serviceGroups } from "./data";
 
 // Ícono + video de fondo por grupo (mismo orden que serviceGroups).
@@ -47,13 +48,9 @@ export default function ServicesShowcase() {
               }`}
             >
               {/* Video de fondo */}
-              <video
+              <AutoVideo
                 className="absolute inset-0 h-full w-full object-cover"
                 src={video}
-                autoPlay
-                muted
-                loop
-                playsInline
               />
               {/* Velo: más oscuro cuando está activa para leer los precios */}
               <div

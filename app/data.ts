@@ -33,13 +33,13 @@ export const team: Professional[] = [
     name: "Alí",
     role: "Manos, pies & láser",
     specialties: ["Manicure", "Pedicure", "Depilación Láser"],
-    photo: "/images/team-2.jpeg",
+    photo: "/images/team-3.jpeg",
   },
   {
     name: "Yesi",
     role: "Manos, pies & cera",
     specialties: ["Manicure", "Pedicure", "Depilación con cera"],
-    photo: "/images/team-3.jpeg",
+    photo: "/images/team-2.jpeg",
   },
 ];
 
